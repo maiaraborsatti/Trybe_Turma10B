@@ -43,3 +43,17 @@ if ((a > b) && (a > c)) {
 } else {
     console.log(c)
 }
+
+//4. Criação de um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
+switch(c) {
+    case 15:
+        console.log("positive");
+        break;
+
+    case 10:
+        console.log("negative");
+        break;
+
+    default:
+        console.log("zero");
+}
