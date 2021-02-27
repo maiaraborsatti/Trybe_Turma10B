@@ -26,3 +26,10 @@ if (a > b) {
 if (a > b) {
     console.log(a % b);
 }
+
+//2. Criação de um programa que retorne o maior de dois números.
+if (a > b) {
+    console.log(a)
+} else {
+    console.log(b)
+}
