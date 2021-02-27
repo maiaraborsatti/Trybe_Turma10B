@@ -33,3 +33,13 @@ if (a > b) {
 } else {
     console.log(b)
 }
+
+//3. Criação de um programa que retorne o maior de três números.
+let c = 15;
+if ((a > b) && (a > c)) {
+    console.log(a);
+} else if ((b > a) && (b > c)) {
+    console.log(b);
+} else {
+    console.log(c)
+}
