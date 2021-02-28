@@ -57,21 +57,39 @@ if (c >= 0) {
 let soma = a + b + c
 let angulo = 180
 
-switch(soma < 0) {
-    case soma === angulo:
-        console.log(true);
+if (soma > 0 && soma == angulo) {
+    console.log(true); 
+} else if (soma > 0 && soma !== angulo) {
+    console.log(false); 
+} else {
+    console.log("Erro");
+} 
+
+//6. Criar um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+let peca = "Rei";
+
+switch (peca.toLowerCase()) {
+    case "torre":
+    console.log("Horizontais");
+    break;
+
+    case "cavalo":
+        console.log("em L");
+        break;
+        
+    case "bispo":
+        console.log("diagonal");
         break;
 
-    case soma > angulo:
-        console.log(false);
+    case "rainha":
+        console.log("horizontal, vertical e diagonal");
         break;
-
-    case soma < angulo:
-        console.log(false);
+    
+    case "rei":
+        console.log("horizontal, vertical e diagonal");
         break;
 
     default:
-        console.log("Erro");
+    console.log("Essa peça não existe no jogo!")
+
 }
-
-
