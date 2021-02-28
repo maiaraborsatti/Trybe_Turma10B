@@ -128,14 +128,31 @@ switch (true) {
 
 //8. Criar um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par.
 if ((a % 2 == 0) || (b % 2 == 0) || (c % 2 == 0)) {
-    console.log(true)
+    console.log(true);
 } else {
-    console.log(false)
+    console.log(false);
 }
 
 //9. Criar um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. 
 if ((a % 2 !== 0) || (b % 2 !== 0) || (c % 2 !== 0)) {
-    console.log(true)
+    console.log(true);
 } else {
-    console.log(false)
+    console.log(false);
 }
+
+//10. Criar um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos. E o programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
+
+let custoDoProduto = 50; //sobre o custo, incide um imposto de 20%.
+let custoDoProdutoComImposto = (custoDoProduto * 20 / 100) + custoDoProduto;
+let valorDeVenda = 100;
+let lucro = valorDeVenda - custoDoProdutoComImposto;
+let entrada = 1000;
+
+if (entrada >= 0) {
+    console.log(lucro * entrada)
+} else {
+    console.log("Erro - compra menor que 1")
+}
+
+
+
