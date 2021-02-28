@@ -1,6 +1,8 @@
-//1. Criação de cinco programas, um para cada operação aritmética básica, com duas variáveis, A e B.
 let a = 10;
 let b = 5;
+let c = 15;
+
+//1. Criação de cinco programas, um para cada operação aritmética básica, com duas variáveis, A e B.
 
 //Adição
 if (a > b) {
@@ -35,7 +37,6 @@ if (a > b) {
 }
 
 //3. Criação de um programa que retorne o maior de três números.
-let c = 15;
 if ((a > b) && (a > c)) {
     console.log(a);
 } else if ((b > a) && (b > c)) {
@@ -132,3 +133,9 @@ if ((a % 2 == 0) || (b % 2 == 0) || (c % 2 == 0)) {
     console.log(false)
 }
 
+//9. Criar um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. 
+if ((a % 2 !== 0) || (b % 2 !== 0) || (c % 2 !== 0)) {
+    console.log(true)
+} else {
+    console.log(false)
+}
