@@ -45,15 +45,33 @@ if ((a > b) && (a > c)) {
 }
 
 //4. Criação de um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
-switch(c) {
-    case 15:
-        console.log("positive");
+if (c >= 0) {
+    console.log("positive"); 
+} else if (c < 0) {
+    console.log("negative"); 
+} else {
+    console.log("zero")
+}    
+
+//5. Criar um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+let soma = a + b + c
+let angulo = 180
+
+switch(soma < 0) {
+    case soma === angulo:
+        console.log(true);
         break;
 
-    case 10:
-        console.log("negative");
+    case soma > angulo:
+        console.log(false);
+        break;
+
+    case soma < angulo:
+        console.log(false);
         break;
 
     default:
-        console.log("zero");
+        console.log("Erro");
 }
+
+
