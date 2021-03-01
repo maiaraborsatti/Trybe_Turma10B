@@ -16,9 +16,18 @@ console.log(soma);
 
 //3. Calcular e imprimir a média aritmética dos valores contidos no array
 let media = 0;
+let resultado;
 for (let i = 0; i < numbers.length; i++) {
     media = numbers[i] + media;
-  }
-console.log(media / numbers.length);
+    }
+resultado = media / numbers.length;
+console.log(resultado);
+
+//4. Com o mesmo código do exercício anterior, caso valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20"
+if (resultado > 20) {
+    console.log("valor maior que 20");
+} else {
+    console.log("valor menor ou igual a 20") 
+}
 
 //
