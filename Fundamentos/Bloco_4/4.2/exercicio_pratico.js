@@ -45,7 +45,7 @@ let impar = 0;
 
 for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 !== 0) {
-        impar = impar + 1;
+        impar += 1;
   }
 
 console.log(impar);
