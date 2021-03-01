@@ -41,5 +41,11 @@ for (let i = 0; i < numbers.length; i++) {
 console.log (numeroAnterior);
 
 //6. Descubrir quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprimir a mensagem: "nenhum valor ímpar encontrado"
+let impar = 0;
 
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 !== 0) {
+        impar = impar + 1;
+  }
 
+console.log(impar);
