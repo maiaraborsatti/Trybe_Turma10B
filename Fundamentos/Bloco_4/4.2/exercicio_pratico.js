@@ -40,6 +40,6 @@ for (let i = 0; i < numbers.length; i++) {
   }
 console.log (numeroAnterior);
 
-//6. 
+//6. Descubrir quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprimir a mensagem: "nenhum valor ímpar encontrado"
 
 
