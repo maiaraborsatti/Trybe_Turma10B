@@ -13,3 +13,12 @@ for (let i = 0; i < numbers.length; i++) {
     soma = numbers[i] + soma;
   }
 console.log(soma);
+
+//3. Calcular e imprimir a média aritmética dos valores contidos no array
+let media = 0;
+for (let i = 0; i < numbers.length; i++) {
+    media = numbers[i] + media;
+  }
+console.log(media / numbers.length);
+
+//
