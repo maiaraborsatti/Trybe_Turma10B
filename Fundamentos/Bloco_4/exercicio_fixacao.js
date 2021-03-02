@@ -1,5 +1,6 @@
-//1. Criar um objeto player.
+//OBJETOS:
 
+//1. Criar um objeto player.
 let player = {
   name: 'Marta',
   lastName: 'Silva',
@@ -14,3 +15,6 @@ player.bestInTheWorld = [2006, 2007, 2008, 2009, 2010, 2018];
 
 //4. Acessar a chave bestInTheWorld e faça um console.log 
 console.log("A jogadora " + player.name + " " + player.lastName + " foi eleita a melhor do mundo por " + player.bestInTheWorld.length + " vezes.");
+
+//5. Acesse a chave medals e faça um console.log
+console.log("A jogadora possui " + player.medals.golden + " medalhas de ouro e " + player.medals.silver + " medalhas de prata.")
