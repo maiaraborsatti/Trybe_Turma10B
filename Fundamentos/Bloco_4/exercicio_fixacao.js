@@ -18,3 +18,17 @@ console.log("A jogadora " + player.name + " " + player.lastName + " foi eleita a
 
 //5. Acesse a chave medals e faça um console.log
 console.log("A jogadora possui " + player.medals.golden + " medalhas de ouro e " + player.medals.silver + " medalhas de prata.")
+
+//-----------------------------------------------------
+
+//FOR IN
+
+//6. Diferença de OF (conteúdo) e IN (índice)
+var fruits = ["Apple", "Banana", "Orange"];
+for (let key of fruits) {
+  console.log(key);
+}
+
+for (let key in fruits) {
+    console.log(key);
+  }
