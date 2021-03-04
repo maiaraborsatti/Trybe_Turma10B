@@ -19,15 +19,7 @@
     </div>
   </div>
  
-  <!--
-    
-    
-    
-    
-    8. Agora acesse o terceiroFilho a partir de pai .
-    -->
-
-    <script> 
+     <script> 
     // 1. Acesse o elemento elementoOndeVoceEsta.
     document.querySelector('#elementoOndeVoceEsta');
 
@@ -38,16 +30,21 @@
     document.querySelector('#primeiroFilho').innerText = 'Primeiro filho';
 
     // 4. Acesse o primeiroFilho a partir de pai.
-    document.querySelector('#pai').firstChild;
+    document.querySelector('#pai').childNodes[1]; // <div>
+    document.querySelector('#pai').firstChild; // #text
 
     // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
-    document.querySelector('#elementoOndeVoceEsta').parentNode.firstChild;
+    document.querySelector('#elementoOndeVoceEsta').parentNode.firstChild; // #text
      
     // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
-    document.querySelector('#elementoOndeVoceEsta').nextSibling;
+    document.querySelector('#elementoOndeVoceEsta').nextSibling; // #text
 
     // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
-    document.querySelector('#elementoOndeVoceEsta').nextSibling.nextElementSibling;
+    document.querySelector('#elementoOndeVoceEsta').nextSibling.nextElementSibling; // <div>
+
+    // 8. Agora acesse o terceiroFilho a partir de pai.
+    document.querySelector('#pai').childNodes[5]; // <div>
+
     
     </script>
 </body>
