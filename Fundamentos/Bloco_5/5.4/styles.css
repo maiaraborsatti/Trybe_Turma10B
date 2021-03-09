@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+}
+
+#texto {
+    color: brown;
+    font-size: large;
+    line-height: 30px;
+    font-family: sans-serif;
+}
