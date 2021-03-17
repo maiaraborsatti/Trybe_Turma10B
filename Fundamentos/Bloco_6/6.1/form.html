@@ -10,7 +10,7 @@
 <body>
   <form action="" method="get" class="formulario">
     <fieldset>
-      <legend>Dados Pessoais</legend>
+      <legend>DADOS PESSOAIS</legend>
       <label for="full-name">Nome</label>
       <input type="text" name="name" id="full-name" maxlength="40" placeholder="Digite seu nome completo" required autofocus>
       <br>
@@ -36,6 +36,21 @@
       <input type="radio" name="moradia" id="moradia2" value="apto"required>
       <br>
     </fieldset>
+    <fieldset>
+      <legend>DADOS DO SEU ÚLTIMO EMPREGO</legend>
+      <label for="curriculo">Resumo do currículo</label>
+      <textarea name="curriculo" id="curriculo" cols="40" rows="15" maxlength="1000" minlength="100" placeholder="Escreva um resumo do seu currículo." required></textarea>
+      <br>
+      <label for="cargo">Cargo</label>
+      <input type="text" name="cargo" id="cargo" maxlength="40" required>
+      <br>
+      <label for="descricao">Descrição do Cargo</label>
+      <input type="text" name="descricao" id="descricao" maxlength="500" required>
+      <br>
+      <label for="data">Data de Início</label>
+      <input type="date" name="data" id="data" required>
+      <br>
+    </fieldset>
   </form>
   <script src="script.js"></script>
 </body>
@@ -47,4 +62,10 @@
   Cidade - Texto (Limite de 28 caracteres / Campo obrigatório)
   Estado - ComboBox (Todos os estados do Brasil / Utilize estruturas de repetição via JavaScript para gerar os <option> / Campo obrigatório)
   Tipo - Radio Button (Casa, Apartamento / Campo obrigatório) -->
+
+<!-- 2. Crie outro <fieldset> para dados do seu último emprego
+  Resumo do currículo - TextArea (Limite de 1000 caracteres / Campo obrigatório)
+  Cargo - Texto (Limite de 40 caracteres / Campo obrigatório)
+  Descrição do cargo - Texto (Limite de 500 caracteres / Campo obrigatório)
+  Data de início - Texto (Verificar o formato da data dd/mm/aaaa / O dia deve ser > 0 e <= 31. / O mês deve ser > 0 e <= 12. / O ano não pode ser negativo. / Caso alguma das condições for inválida no momento do envio do formulário, exibir mensagem de erro contextualizada. / Campo obrigatório) -->
 </html>
