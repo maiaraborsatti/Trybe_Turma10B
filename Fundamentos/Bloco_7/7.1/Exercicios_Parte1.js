@@ -33,5 +33,13 @@ testingScope(true);
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
   
 const retoneArray = () => `Os números ${oddsAndEvens[5]} ${oddsAndEvens[1]} ${oddsAndEvens[2]} ${oddsAndEvens[4]} ${oddsAndEvens[3]} ${oddsAndEvens[0]} se encontram ordenados de forma crescente!`;
-
 console.log(retoneArray());
+
+// Compreensão com a ajuda do Gabarito:
+const retoneArrayBonus = () => `Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente!`;
+console.log(retoneArrayBonus());
+
+// Gabarito:
+console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente !`);
+
+
