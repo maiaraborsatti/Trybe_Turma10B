@@ -67,3 +67,26 @@ console.log(listSkillsWithFor(student));
 const listSkillsWithValues = (student) => Object.values(student);
 // Com Object.values
 console.log(listSkillsWithValues(student));
+
+// Parte IV - Object.entries
+const países = {
+  França: 'Paris',
+  Brasil: 'Brasília',
+  Espanha: 'Madrid',
+  Portugal: 'Lisboa',
+};
+// Retorna um arrey de arrey
+const pairKeyValue = Object.entries(países);
+console.log(pairKeyValue);
+
+// Apresentar separadamente:
+for(index in pairKeyValue) {
+  console.log('--------');
+  console.log('Pais:', pairKeyValue[index][0]);
+  console.log('Capital:', pairKeyValue[index][1]);
+};
+
+
+
+
+
