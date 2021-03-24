@@ -43,6 +43,27 @@ const listSkills = (student) => {
 
 console.log('Estudante 1');
 listSkills(student1);
-
 console.log('Estudante 2');
 listSkills(student2);
+
+// Parte III - Object.values
+const student = {
+  Html: 'Muito Bom',
+  Css: 'Bom',
+  JavaScript: 'Ótimo',
+  SoftSkill: 'Ótimo',
+};
+
+const listSkillsWithFor = (student) => {
+  const skills = [];
+  for(skill in student) {
+    skills.push(student[skill]);
+  }
+  return skills;
+};
+// Sem Object.values
+console.log(listSkillsWithFor(student));
+
+const listSkillsWithValues = (student) => Object.values(student);
+// Com Object.values
+console.log(listSkillsWithValues(student));
