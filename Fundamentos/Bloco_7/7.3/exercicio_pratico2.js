@@ -20,3 +20,7 @@ assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
 
 // 2. Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
 assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+
+// 3. Verifique se o array passado por parâmetro não sofreu alteraçõe
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 8), [1, 2, 3, 4]);
+
