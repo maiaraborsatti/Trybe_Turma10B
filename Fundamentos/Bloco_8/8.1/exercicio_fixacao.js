@@ -12,7 +12,9 @@ const primeiraClasse3 = () => console.log('Partiu dormir!!');
 primeiraClasse3();
 
 // 4. Desenvolva uma HOF chamada doingThings e configure esta função para que retorne a execução das funções de primeira classe que você criou nos exemplos anteriores.
-const doingThings = (acao) => acao();
+const doingThings = (acao) => acao ()
 
-// Ao chamar a função doingThings, ela deve retornar o valor do respectivo parâmetro
+// Ao chamar a função doingThings, ela deve retornar o valor do respectivo parâmetro, neste caso:
 doingThings(primeiraClasse1);
+
+
