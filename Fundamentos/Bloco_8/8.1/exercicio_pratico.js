@@ -33,10 +33,38 @@ console.log(resultado(2,numero));
 - Deve ser possível chamar a HOF criada de forma encadeada (Ex: checarResposta('Gabarito')('Teste')) */
 
 const check = (gabarito) => (resposta) => 
-gabarito.toLowerCase() === resposta.toLowerCase() ? true : false;
+gabarito.toLowerCase() === resposta.toLowerCase()
 
 // Sugestão de respostas a serem validadas.
 const correctAnswer = 'higher order function';
 const userAnswer = 'HIGHER ORDER FUNCTION';
 
 console.log(check(userAnswer)(correctAnswer));
+
+// 4. Crie uma HOF que receberá três parâmetros. O primeiro será um array de respostas corretas (Gabarito), o segundo será um array de respostas a serem checadas (Respostas da pessoa estudante) e o terceiro é uma função que checa se a resposta está correta e faz a contagem da pontuação final recebida pela pessoa estudante. Ao final a HOF deve retornar o total da contagem de respostas certas.
+// Quando a resposta for correta a contagem sobe 1 ponto, quando for incorreta desce 0.5 pontos, e quando não houver resposta ("N.A") não altera-se a contagem.
+const avaliacao = (gabarito, resposta, pontuacao) => {
+  return {
+    gabarito: gabarito,
+    resposta: resposta,
+    pontuacao: pontuacao(gabarito,resposta),
+  }
+}
+
+const pontuacao = (gabarito, resposta) => {
+  let contador = 0;
+  for (let i = 0; i < gabarito.length; i += 1) {
+    if (gabarito[i] === resposta [i]) {
+      contador += 1;
+    } else if (resposta[i] === 'N.A'){
+      contador = contador;
+    } else {
+      contador -= 0.5;
+    }
+  } return contador;
+}
+
+const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+console.log(avaliacao(rightAnswers, studentAnswers, pontuacao));
