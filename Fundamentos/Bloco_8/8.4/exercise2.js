@@ -66,8 +66,8 @@ const books = [
 ];
 
 function allNames() {
-  const newArray = books.reduce((result, newArray) => `${result},${newArray.author.name}`);
- return newArray;
+  const newArray = books.reduce((result, newArray) => `${result}, ${newArray.author.name}`, 'Nome:');
+  return newArray;
 }
 console.log(allNames())
 
