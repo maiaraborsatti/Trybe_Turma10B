@@ -1,4 +1,4 @@
-// 3. Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+// 4. Encontre o livro com o maior nome.
 
 const assert = require('assert');
 
@@ -36,7 +36,6 @@ const books = [
   {
     id: 4,
     name: 'Duna',
-    genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
       birthYear: 1920,
@@ -65,13 +64,21 @@ const books = [
   },
 ];
 
-const expectedResult = 43;
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
 
-function averageAge() {
-  const soma = books.reduce((result, newArray) => result + (newArray.releaseYear - newArray.author.birthYear),0);
-  const divisor = books.length;
-  return soma / divisor;
+function longestNamedBook() {
+  return books.reduce((acc, bookName) => bookName.name.length > acc ? bookName.name : acc)
 }
-// console.log(averageAge());
 
-assert.strictEqual(averageAge(), expectedResult);
+// console.log(longestNamedBook())
+
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
