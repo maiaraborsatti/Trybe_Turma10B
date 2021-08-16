@@ -1,17 +1,12 @@
 db.movies.find();
 
-// ACrie um array de documentos chamado cast para o filme Batman com os seguintes dados:
-db.movies.updateOne( { title: "Batman" }, 
-{ $push: { cast: {
-  $each: [
-      {
-  "character": "Batman"
-},
+// Adicione o campo character com o valor Marv ao array de cast em que o campo actor seja igual a Daniel Stern no filme Home Alone.
+db.movies.updateOne( { title: "Home Alone" }, 
 {
-  "character": "Alfred"
+  $set: {
+    "cast.$[elemento].character": "Marv"
+  }
 },
-{
-  "character": "Coringa"
-}
-  ]}
-   }});
+{ 
+  arrayFilters: [ { "elemento.actor": "Daniel Stern" } ] 
+});
