@@ -1,0 +1,7 @@
+db.movies.find();
+
+// Remova a categoria "action" do filme Batman. 
+db.movies.updateOne( {title: "Batman"}, { $pop: { category: -1 }});
+
+// ou 
+db.movies.updateOne({title: "Batman"}, {$pull: {category: "action"}})
