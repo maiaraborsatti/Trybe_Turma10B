@@ -12,7 +12,19 @@ function sorteio () {
   if(numeroEscolhido === numeroSorteado){
     return console.log("Parabéns, número correto!")
   }
-  return console.log(`Opa, não foi dessa vez. O número era ${numeroSorteado}`)
+  return console.log(`Opa, não foi dessa vez. O número era ${numeroSorteado}`);
 };
 
-sorteio();
+function jogo () {
+  sorteio ();
+
+  const novamente = readline.question(
+    "Jogar novamente? (Digite s para sim, e qualquer outra tecla para não) "  );
+
+  if(novamente !== "s"){
+    return console.log("OK, até a próxima!")
+  }
+  jogo()
+}
+
+jogo();
