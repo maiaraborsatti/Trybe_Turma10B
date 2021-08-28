@@ -5,8 +5,11 @@
   "main": "imc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node imc.js"
+    "imc": "node imc.js"
   },
   "author": "Maiara <maiara.borsatti@gmail.com>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
