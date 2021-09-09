@@ -5,9 +5,7 @@ const { expect } = require('chai');
   um objeto simulando os métodos que iremos desenvolver,
   porém, eles não terão nenhum comportamento
 */
-const MoviesModel = {
-  create: () => {}
-};
+const MoviesModel = require('../../models/movieModel');
 
 describe('Insere um novo filme no BD', () => {
   const payloadMovie = {
