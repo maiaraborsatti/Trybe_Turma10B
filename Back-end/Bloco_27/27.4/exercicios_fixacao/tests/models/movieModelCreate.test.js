@@ -6,7 +6,7 @@ const mongoConnection = require('../../models/connection');
 const MoviesModel = require('../../models/movieModel');
 
 describe('Insere um novo filme no BD', () => {
-/* Vamos deixar o objeto com o mock da conexão como uma variável global dentro desse describe. */
+  /* Vamos deixar o objeto com o mock da conexão como uma variável global dentro desse describe. */
   let connectionMock; 
 
   const payloadMovie = {
@@ -15,8 +15,8 @@ describe('Insere um novo filme no BD', () => {
     releaseYear: 1999,
   }
 
-/* Esta é uma forma provisória para mockar a função insertOne
-Desta forma ela não vai chamar o banco de verdade para fazer esse teste */
+  /* Esta é uma forma provisória para mockar a função insertOne
+  Desta forma ela não vai chamar o banco de verdade para fazer esse teste */
   before(() => {
     const ID_EXAMPLE = '604cb554311d68f491ba5781';
     const insertOne = async () => ({ insertedId: ID_EXAMPLE });
@@ -30,7 +30,7 @@ Desta forma ela não vai chamar o banco de verdade para fazer esse teste */
     sinon.stub(mongoConnection, 'getConnection').resolves(connectionMock);
   });
 
-/* Restauraremos a função `getConnection` original após os testes. */
+  /* Restauraremos a função `getConnection` original após os testes. */
     after(() => {
       mongoConnection.getConnection.restore();
     });
