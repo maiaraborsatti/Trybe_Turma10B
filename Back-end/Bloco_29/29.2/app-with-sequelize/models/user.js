@@ -3,6 +3,7 @@ const User = (sequelize, DataTypes) => {
     fullName: DataTypes.STRING,
     email: DataTypes.STRING,
     address: DataTypes.STRING,
+    phone_num: DataTypes.STRING,
   });
 
   return User;
