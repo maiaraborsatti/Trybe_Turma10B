@@ -3,6 +3,10 @@ const socket = window.io();
 const form = document.querySelector('form');
 const inputMessage = document.querySelector('#messageInput');
 
+window.onbeforeunload = function(event) {
+  socket.disconnect();
+};
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   socket.emit('clientMessage', inputMessage.value);
